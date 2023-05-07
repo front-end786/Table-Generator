@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-------------------------------- 
+    Style link -----------------------
+    ---------------------------------->
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-------------------------------- 
+    Script link ----------------------
+    ---------------------------------->
+
+    <script src="./index.js" defer></script>
+
+    <!-------------------------------- 
+    Title link -----------------------
+    ---------------------------------->
+
+    <title>Sayyed Asad Ullah's Exchange Rate Curruncy</title>
+
+    <!--------------------------------
+    Web-Icon link --------------------
+    ---------------------------------->
+    <link rel="shortcut icon" href="Asad-logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="row">
+      <!--------------------------------
+    Heading --------------------------
+    ---------------------------------->
+      <h1 class="h1">SAU Table Generator</h1>
+      <form>
+        <!--------------------------------
+    Number Enter ---------------------
+    ---------------------------------->
+        <div class="number basic-number">
+          <input
+            type="number"
+            name="number"
+            id="number"
+            required
+            placeholder="Enter the Number"
+          />
+          <input type="submit" value="Generate Table" />
+        </div>
+
+        <!--------------------------------
+    Multiply Value Enter -------------
+    ---------------------------------->
+        <div class="multiply basic-number">
+          <input
+            type="number"
+            name="number2"
+            id="number2"
+            required
+            placeholder="Enter Multiply Value"
+          />
+          <input type="submit" value="Generate Table" />
+        </div>
+      </form>
+      <!--------------------------------
+    Table Generarting Target ---------
+    ---------------------------------->
+      <div class="table-target"></div>
+    </div>
+  </body>
+</html>

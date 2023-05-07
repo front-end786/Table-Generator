@@ -1,0 +1,167 @@
+/*---------------------------------
+Basic Structure -------------------
+-----------------------------------
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/*---------------------------------
+HTML Font Sizing ------------------
+-----------------------------------
+*/
+
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 535px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 395px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 360px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+/*---------------------------------
+Reuse variables -------------------
+-----------------------------------
+*/
+
+:root {
+  --sau-gradient: linear-gradient(
+    270deg,
+    #944bdd,
+    #b349d0 11%,
+    #c846c1 22%,
+    #d94ab5 33%,
+    #e44ea6 44%,
+    #ee599c 56%,
+    #f36293 67%,
+    #f66f8a 78%,
+    #f77e88 89%,
+    #f68984
+  );
+  --sau-dark-black-color: #000000;
+  --sau-white-color: #ffffff;
+  --sau-similar-mini: 0.5rem;
+  --sau-similar: 1rem;
+  --sau-similar-huge-mini: 1.5rem;
+  --sau-similar-big: 2rem;
+  --sau-similar-x-big: 2.5rem;
+  --sau-gutter-x-mini: 3rem;
+  --sau-gutter-mini: 4rem;
+  --sau-gutter-huge: 5rem;
+  --sau-gutter-huge-mini: 6rem;
+  --sau-gutter-huge: 7rem;
+  --sau-basic-font: 1.7rem;
+  --sau-mini-font: 1.2rem;
+  --sau-big-font: 2rem;
+  --sau-h1: 4.5rem;
+  --sau-basic-shadow: 0 0 10px rgba(168, 154, 154, 0.879);
+}
+
+/*---------------------------------
+Body Styling ----------------------
+-----------------------------------
+*/
+
+body {
+  background-color: var(--sau-dark-black-color);
+  height: 100vh;
+}
+
+.row {
+  max-width: 1140px;
+  margin: auto;
+  padding: var(--sau-similar-x-big) 0;
+}
+
+h1 {
+  background: var(--sau-gradient);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: var(--sau-h1);
+  text-align: center;
+}
+form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--sau-gutter-x-mini);
+  gap: var(--sau-gutter-x-mini);
+}
+input {
+  background: linear-gradient(
+      var(--sau-dark-black-color),
+      var(--sau-dark-black-color)
+    ),
+    var(--sau-gradient);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  color: inherit;
+  padding: var(--sau-similar) var(--sau-similar-huge-mini);
+  font-size: var(--sau-basic-font);
+  border: 1px solid transparent;
+  outline: none;
+}
+
+@media (max-width: 535px) {
+  input {
+    height: var(--sau-gutter-huge);
+  }
+}
+
+.basic-number {
+  display: flex;
+}
+.basic-number :first-child {
+  border-right: none;
+}
+
+table {
+  border: 1px solid transparent;
+  background: linear-gradient(
+      var(--sau-dark-black-color),
+      var(--sau-dark-black-color)
+    ),
+    var(--sau-gradient);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  font-size: var(--sau-big-font);
+  border-collapse: collapse;
+  text-align: center;
+  margin: 4rem auto 0;
+  box-shadow: var(--sau-basic-shadow);
+}
+
+th,
+td {
+  border: 1px solid transparent;
+  background: linear-gradient(
+      var(--sau-dark-black-color),
+      var(--sau-dark-black-color)
+    ),
+    var(--sau-gradient);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  padding: var(--sau-similar) var(--sau-gutter-x-mini);
+}
